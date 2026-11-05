@@ -1080,3 +1080,152 @@ body {
     }
 
 }
+
+/* Certificates Section */
+.certificates {
+    padding: 100px 10%;
+    background-color: #0b1120;
+    scroll-margin-top: 80px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.certificate-card {
+    background-color: #111827;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #263449;
+}
+
+.certificate-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-img img {
+    transform: scale(1.05);
+}
+
+.certificate-content {
+    padding: 20px;
+}
+
+.certificate-content h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.cert-issuer {
+    color: #60a5fa;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cert-date {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.certificate-content .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* Light Mode Support */
+body.light-mode .certificates {
+    background-color: #f1f5f9;
+}
+
+body.light-mode .certificate-card {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body.light-mode .certificate-content h3 {
+    color: #1e293b;
+}
+
+body.light-mode .cert-date {
+    color: #475569;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        padding: 70px 20px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Duolingo Card Styling */
+.duolingo-widget {
+    margin-top: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.duolingo-widget img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 1px solid #263449;
+    transition: transform 0.3s ease;
+}
+
+.duolingo-widget img:hover {
+    transform: scale(1.03);
+}
+
+.duolingo-link {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.duolingo-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Light Mode Adjustment */
+body.light-mode .duolingo-widget img {
+    border-color: #cbd5e1;
+}
+
+body.light-mode .duolingo-link {
+    color: #2563eb;
+}
