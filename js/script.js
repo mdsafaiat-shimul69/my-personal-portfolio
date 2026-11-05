@@ -184,3 +184,4 @@ revealElements.forEach(function (element) {
     observer.observe(element);
 
 });
+
